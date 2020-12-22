@@ -1,0 +1,8 @@
+RewriteEngine on
+
+# Rewrite /foo/bar to /foo/bar.php
+ RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{REQUEST_URI} folder
+RewriteRule ^(.*)$ https://tekkifii-enabel.be/monitoring/$1 [R,L]

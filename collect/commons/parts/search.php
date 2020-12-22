@@ -1,0 +1,12 @@
+<script>
+$(document).ready(function(){
+	$('#collect-search').on("keyup",function(){
+		if($(this).val()){							
+			$('.collect-details').hide();
+			$('.collect-details[data-search*="'+$(this).val().toUpperCase()+'"]').show();
+		}else{
+			$('.collect-details').show();
+		}
+	});
+});
+</script>
